@@ -1,0 +1,15 @@
+.welcome-empty-text{
+    font-size: 16px;
+    color: #000000;
+    margin: 0px;
+    width: 100%;
+    padding: 31px 27px;
+}
+.welcome-card{
+    height: 400px;
+    margin-top: 44px;
+    width: 470px;
+    background: #C4C4C4;
+    display: flex;
+    align-items: flex-end;
+}
