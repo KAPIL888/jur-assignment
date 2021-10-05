@@ -37,6 +37,8 @@ const Login = () => {
       }
     }
   };
+
+
   return (
     <div className="authentication-form">
       <SideBar />
@@ -77,7 +79,7 @@ const Login = () => {
           />
 
           <CheckBox type="login"/>
-          <Button label="Sign In" handdleClick={submitForm} disabled={false} />
+          <Button label="Sign In" handdleClick={submitForm} disabled={!form.email && !form.password} />
         </div>
       </div>
     </div>

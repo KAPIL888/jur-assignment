@@ -7,6 +7,9 @@ body{
 p{
   margin: 0px;
 }
+a{
+  text-decoration: none;
+}
 
 @media only screen and (max-width: 1000px) {
   .side-bar-container {

@@ -23,14 +23,14 @@ const NavBar = () => {
         <img className="nav-logo" alt="logo not found" src={Logo} />
       </div>
       <div className="nav-left">
-        <p>DashBoard</p>
-        <p>
-          <span className="user" onClick={logout}>
+        <p>Dashboard</p>
+        <div className="user-container">
+          <span className="user" >
             {getName()}
-          </span>
-          Logout
-        </p>
-      </div>
+            </span>
+            <span className="logout-button" onClick={logout}>Logout</span>
+          </div>
+          </div>
     </div>
   );
 };
