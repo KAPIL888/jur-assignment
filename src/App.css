@@ -7,6 +7,33 @@ body{
 p{
   margin: 0px;
 }
+
+@media only screen and (max-width: 1000px) {
+  .side-bar-container {
+    display: none;
+    padding: 54px;
+  }
+  .right-container{
+     width: 100% !important;
+     padding-right: 20px !important;
+     padding: 20px;
+  }
+  .form-container{
+    width: 100% !important;
+
+  }
+  .welcome-card{
+    width: 100% !important;
+  }
+  .authentication-form {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+  }
+}
+
+
 .authentication-form {
   display: flex;
   flex-direction: row;
