@@ -4,6 +4,7 @@ import Register from "../pages/register/register";
 import Welcome from "../pages/welcome/welcome";
 
 const AllRoutes = () => {
+
   return (
     <Router>
       <Route path="/" exact>

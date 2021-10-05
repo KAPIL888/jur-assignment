@@ -1,15 +1,50 @@
-import Button from "../../component/button/button";
-import InputField from "../../component/inputField/Input";
-import LabelWithForgetPassword from "../../component/labelWithForgetPassword/labelWithForgetPassword";
 import SideBar from "../../component/slideBar/sliderBar";
-import { HanddleFormState } from "../../utils/formState";
-import "./register.css"
+import { Link ,useHistory} from "react-router-dom";
+import { auth } from "../../utils/api";
+import "./register.css";
+import {
+  ErrorNotify,
+  SuccessNotify,
+} from "../../component/toastMessage/toastMessage";
+import RegisterForm from "./registerForm";
+import { setUser } from "../../utils/helpers";
 
 const Register = () => {
-  const { form, onChange } = HanddleFormState();
+  const history = useHistory()
 
-  const submitForm = () => {
-    console.log(form);
+  const submitForm = async (form) => {
+    if (form.first_name && form.last_name && form.password === form["verify-password"]) {
+      let registerResponse = await auth.register(form);
+      if (registerResponse.isSuccess) {
+        setUser(registerResponse.profile)
+        SuccessNotify("Successfully Login");
+        history.push('/welcome')
+
+      } else {
+        ErrorNotify(registerResponse.error);
+      }
+    } else {
+      if (!form.first_name) {
+        ErrorNotify("Please Fill First Name");
+        return;
+      }
+      if (!form.last_name) {
+        ErrorNotify("Please Fill Last Name");
+        return;
+      }
+      if (!form.password) {
+        ErrorNotify("Please Fill Password");
+        return;
+      }
+      if (!form["verify-password"]) {
+        ErrorNotify("Please Verify Password");
+        return;
+      }
+      if (form["verify-password"] !== form.password) {
+        ErrorNotify("Password not matching");
+        return;
+      }
+    }
   };
   return (
     <div className="authentication-form">
@@ -17,75 +52,13 @@ const Register = () => {
       <div className="right-container">
         <div className="form-filed">
           <div className="header">
-            <span className="new-jur">New to Jur?</span>
-            <span className="sign-up-text">Sign Up</span>
+            <span className="new-jur">Already a member?</span>
+            <Link to="/">
+              <span className="sign-up-text">Sign In</span>
+            </Link>
           </div>
         </div>
-
-        <div className="form-container">
-          <p className="signin-tex">Sign In</p>
-          <p className="started-with-jur">Let's gets started with jur</p>
-
-          <LabelWithForgetPassword
-            label="Full Name"
-            require={true}
-            showForget={false}
-          />
-          <div className="full-name-container">
-            <div className="first-name">
-              <InputField
-                placeHolder="First Name"
-                showHide={false}
-                name="first-name"
-                handdleChange={onChange}
-              />
-            </div>
-            <div className="last-name">
-              <InputField
-                placeHolder="Last Name"
-                showHide={false}
-                name="last-name"
-                handdleChange={onChange}
-              />
-            </div>
-          </div>
-
-          <LabelWithForgetPassword
-            label="Email Address"
-            require={true}
-            showForget={false}
-          />
-          <InputField
-            placeHolder=""
-            showHide={false}
-            name="email"
-            handdleChange={onChange}
-          />
-          <LabelWithForgetPassword
-            label="Password"
-            require={true}
-            showForget={false}
-          />
-          <InputField
-            showHide={true}
-            placeHolder=""
-            name="password"
-            handdleChange={onChange}
-          />
-
-          <LabelWithForgetPassword
-            label="Verify Password"
-            require={true}
-            showForget={false}
-          />
-          <InputField
-            showHide={true}
-            placeHolder=""
-            name="verify-password"
-            handdleChange={onChange}
-          />
-          <Button label="Sign In" handdleClick={submitForm} disabled={false} />
-        </div>
+        <RegisterForm submitForm={submitForm} />
       </div>
     </div>
   );
