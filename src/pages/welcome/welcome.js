@@ -1,6 +1,6 @@
-import Button from "../../component/button/button";
-import NavBar from "../../component/navBar/navbar";
-import WelcomeSideBar from "../../component/welcomeSidebar/welcomeSideBar";
+import Button from "component/button/button";
+import NavBar from "component/navBar/navbar";
+import WelcomeSideBar from "component/welcomeSidebar/welcomeSideBar";
 import "./welcome.css";
 const Welcome = () => {
   return (

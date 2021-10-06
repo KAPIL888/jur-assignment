@@ -1,5 +1,5 @@
 import Logo from "../../image/Logo.svg";
-import Ils from "../../image/ils.svg";
+import Illustration from "../../image/Illustration.svg";
 
 const SideBar = () => {
   return (
@@ -7,7 +7,7 @@ const SideBar = () => {
       <img alt="n" src={Logo} />
       <p className="heading">Became a modern arbiture, Now</p>
       <div className="bottom-logo">
-        <img alt="n" src={Ils} />
+        <img alt="n" src={Illustration} />
       </div>
     </div>
   );

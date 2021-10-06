@@ -1,25 +1,30 @@
-import SideBar from "../../component/slideBar/sliderBar";
-import { Link ,useHistory} from "react-router-dom";
-import { auth } from "../../utils/api";
-import "./register.css";
+import { Link, useHistory } from "react-router-dom";
+
+import SideBar from "component/slideBar/sliderBar";
 import {
   ErrorNotify,
   SuccessNotify,
-} from "../../component/toastMessage/toastMessage";
+} from "component/toastMessage/toastMessage";
 import RegisterForm from "./registerForm";
-import { setUser } from "../../utils/helpers";
+import { setUser } from "utils/helpers";
+import { auth } from "utils/api";
+import "./register.css";
+
 
 const Register = () => {
-  const history = useHistory()
 
+  const history = useHistory();
   const submitForm = async (form) => {
-    if (form.first_name && form.last_name && form.password === form["verify-password"]) {
+    if (
+      form.first_name &&
+      form.last_name &&
+      form.password === form["verify-password"]
+    ) {
       let registerResponse = await auth.register(form);
       if (registerResponse.isSuccess) {
-        setUser(registerResponse.profile)
+        setUser(registerResponse.profile);
         SuccessNotify("Successfully Login");
-        history.push('/welcome')
-
+        history.push("/welcome");
       } else {
         ErrorNotify(registerResponse.error);
       }

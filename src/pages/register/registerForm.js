@@ -7,9 +7,9 @@ import { HanddleFormState } from "../../utils/formState";
 const RegisterForm = ({ submitForm }) => {
   const { form, onChange } = HanddleFormState();
 
-  const haddleForm = () =>{
-    submitForm(form)
-  }
+  const haddleForm = () => {
+    submitForm(form);
+  };
 
   return (
     <div className="form-container">

@@ -1,10 +1,10 @@
-.full-name-container{
-    display: flex;
-    justify-content: space-between;
+.full-name-container {
+  display: flex;
+  justify-content: space-between;
 }
-.first-name{
-    width: 48%;
+.first-name {
+  width: 48%;
 }
-.last-name{
-    width: 48%;
+.last-name {
+  width: 48%;
 }

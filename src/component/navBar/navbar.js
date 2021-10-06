@@ -16,7 +16,6 @@ const NavBar = () => {
     return `${user.first_name[0]}${user.last_name[0]}`;
   }, [user]);
 
-
   return (
     <div className="nav-bar-container">
       <div className="nav-right">
@@ -25,12 +24,12 @@ const NavBar = () => {
       <div className="nav-left">
         <p>Dashboard</p>
         <div className="user-container">
-          <span className="user" >
-            {getName()}
-            </span>
-            <span className="logout-button" onClick={logout}>Logout</span>
-          </div>
-          </div>
+          <span className="user">{getName()}</span>
+          <span className="logout-button" onClick={logout}>
+            Logout
+          </span>
+        </div>
+      </div>
     </div>
   );
 };

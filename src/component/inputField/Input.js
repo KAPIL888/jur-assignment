@@ -2,10 +2,10 @@ import { useRef, useState } from "react";
 import "./input.css";
 const InputField = ({ placeHolder, name, handdleChange, showHide }) => {
   const [hide, setHide] = useState(showHide);
-  const inputFocus = useRef()
+  const inputFocus = useRef();
 
   const handdleHide = () => {
-  inputFocus.current.focus()
+    inputFocus.current.focus();
     setHide(!hide);
   };
 

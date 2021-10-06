@@ -20,26 +20,20 @@
   justify-content: space-around;
   align-items: center;
 }
-
-.user-container{
+.user-container {
   display: flex;
   align-items: center;
 }
-
 .nav-left p {
   font-size: 14px;
   color: #151515d9;
   font-family: "Inter";
 }
-
-.logout-button{
+.logout-button {
   font-size: 14px;
   color: #151515d9;
   font-family: "Inter";
 }
-
-
-
 .user {
   height: 24px;
   color: #eb5757;
