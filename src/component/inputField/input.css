@@ -1,21 +1,26 @@
-.input-container{
-    width: 100%;   
-    position: relative;
+.input-container {
+  width: 100%;
+  position: relative;
 }
-input{
-    height: 46px;
-    text-indent:12px;
-    width: 100%;
-    border: 1px solid #ccc;
-  }
-
-  .show-hide{
-    position: absolute;
-    color: #ccc;
-    top: 12px;
-    right: 12px;
-    padding: 4px;
-  }
-  .active-hide{
-      color: #2777EF;
-  }
+input {
+  height: 46px;
+  text-indent: 12px;
+  width: 100%;
+  border: 2px solid #ccc;
+}
+input:focus {
+  height: 46px;
+  text-indent: 12px;
+  width: 100%;
+  border: 2px solid #2777ef;
+}
+.show-hide {
+  position: absolute;
+  color: #ccc;
+  top: 12px;
+  right: 12px;
+  padding: 4px;
+}
+.active-hide {
+  color: #2777ef;
+}

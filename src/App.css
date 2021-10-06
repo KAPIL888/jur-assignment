@@ -1,11 +1,15 @@
-body{
-  font-family: 'Gilroy';
+body {
+  font-family: "Gilroy";
 }
-.label-font label ,span{
+.label-font label,
+span {
   font-size: 16px !important;
 }
-p{
+p {
   margin: 0px;
+}
+a {
+  text-decoration: none;
 }
 .authentication-form {
   display: flex;
@@ -19,7 +23,7 @@ p{
   background-color: #f4f5fa;
   padding: 54px;
   box-sizing: border-box;
-  width:25%;
+  width: 25%;
 }
 .heading {
   font-family: "Circular-Loom";
@@ -40,7 +44,6 @@ p{
 }
 .form-filed {
   width: 100%;
- 
 }
 .header {
   display: flex;
@@ -57,22 +60,21 @@ p{
   color: #2777ef;
 }
 
-.new-jur{
-font-family: Inter;
-font-style: normal;
-font-weight: normal;
-font-size: 16px;
-line-height: 24px;
-letter-spacing: 0.3px;
-color: rgba(21, 21, 21, 0.85);
+.new-jur {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.3px;
+  color: rgba(21, 21, 21, 0.85);
 }
 
 *:focus {
   outline: none;
 }
-/* // login form  */
 
-.right-container{
+.right-container {
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -83,11 +85,11 @@ color: rgba(21, 21, 21, 0.85);
   padding-top: 40px;
 }
 
-.margin-top-input{
+.margin-top-input {
   margin-top: 24px;
 }
 
-.form-container{
+.form-container {
   display: flex;
   height: 100vh;
   margin-top: 10vh;
@@ -96,26 +98,49 @@ color: rgba(21, 21, 21, 0.85);
   height: 70vh;
 }
 
-.signin-tex{
-font-family: Gilroy;
-font-style: normal;
-font-weight: normal;
-font-size: 30px;
-line-height: 38px;
+.signin-tex {
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 38px;
 }
-.started-with-jur{
+.started-with-jur {
   font-family: Inter;
-font-style: normal;
-font-weight: normal;
-font-size: 16px;
-color: rgba(21, 21, 21, 0.6);
-margin-top: 8px;
-line-height: 24px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  color: rgba(21, 21, 21, 0.6);
+  margin-top: 8px;
+  line-height: 24px;
 }
 
-.mt-24{
+.mt-24 {
   margin-top: 24px;
 }
-.mt-8{
+.mt-8 {
   margin-top: 8px;
+}
+@media only screen and (max-width: 1000px) {
+  .side-bar-container {
+    display: none;
+    padding: 54px;
+  }
+  .right-container {
+    width: 100%;
+    padding-right: 20px;
+    padding: 20px;
+  }
+  .form-container {
+    width: 100%;
+  }
+  .welcome-card {
+    width: 100%;
+  }
+  .authentication-form {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+  }
 }
