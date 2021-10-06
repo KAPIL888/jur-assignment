@@ -62,12 +62,15 @@ This is an example of how to list things you need to use the software and how to
   
 ### Design
 
-<img src="https://drive.google.com/file/d/1Ezx-XieCeH5w0n6j1NleUM8kwVuaYo-5/view?usp=sharing" >
+#### Login
+![imageedit_3_4454816524](https://user-images.githubusercontent.com/28922032/136192028-6a2b0276-c957-432f-a871-c4e5dc39a22d.png)
 
-<img src="https://drive.google.com/file/d/1R33nF5kh0haHDQXpO3_j2m84X1saId62/view?usp=sharing" >
+#### Registration
+![imageedit_1_6872735782](https://user-images.githubusercontent.com/28922032/136192225-53a87454-64c1-43d3-ada8-66c6586a4d41.png)
 
-<img src="https://drive.google.com/file/d/12e2CniGiUhbVKN9NSNdFhDHro_kNh-sr/view?usp=sharing" >
-  
+#### Welcome
+![imageedit_5_4100239757](https://user-images.githubusercontent.com/28922032/136192371-a972e62d-9f0e-467c-95f4-78640bf382d3.png)
+)  
 
 
 <!-- CONTACT -->
